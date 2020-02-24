@@ -25,7 +25,6 @@
  *    divide by 127 and subtract 1.
  * Just run `diff` tbh, yuno MIT license.
  */
-
 import * as tf from '@tensorflow/tfjs';
 
 /**

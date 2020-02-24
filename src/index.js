@@ -3,13 +3,13 @@ import yolo, { downloadModel } from 'tfjs-yolo-tiny';
 
 import { Webcam } from './webcam';
 
-let model;
+const models = [];
 const webcam = new Webcam(document.getElementById('webcam'));
 
 (async function main() {
   try {
     ga();
-    model = await downloadModel();
+    models.push(await downloadModel())
 
     alert("Just a heads up! We'll ask to access your webcam so that we can " +
       "detect objects in semi-real-time. \n\nDon't worry, we aren't sending " +
